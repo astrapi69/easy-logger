@@ -10,7 +10,7 @@ ADDED:
 
 CHANGED:
 
-- class LoggingConfiguration moved to new package 'io.github.astrapisixtynine.easy.logger' 
+- class LoggingConfiguration moved to new package 'io.github.astrapisixtynine.easy.logger'
 
 Version 1.0
 -------------
