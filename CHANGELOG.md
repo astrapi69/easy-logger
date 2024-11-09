@@ -4,6 +4,13 @@
 Version 1.1-SNAPSHOT
 -------------
 
+ADDED:
+
+- export declaration in module-info.java for the new package 'io.github.astrapisixtynine.easy.logger'
+
+CHANGED:
+
+- class LoggingConfiguration moved to new package 'io.github.astrapisixtynine.easy.logger' 
 
 Version 1.0
 -------------

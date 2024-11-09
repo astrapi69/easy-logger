@@ -20,6 +20,9 @@
  */
 module io.github.astrapisixtynine.easy.logger
 {
-	requires jul.to.slf4j;
+	requires static lombok;
 	requires java.logging;
+	requires jul.to.slf4j;
+
+	exports io.github.astrapisixtynine.easy.logger;
 }
