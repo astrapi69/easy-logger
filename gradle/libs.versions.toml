@@ -10,6 +10,7 @@ gradle-plugin-lombok-version = "8.10.2"
 gradle-plugin-spotless-version = "7.0.0.BETA4"
 gradle-plugin-version-catalog-update-version = "0.8.5"
 gradle-plugin-versions-version = "0.51.0"
+jul-to-slf4j-version = "2.1.0-alpha1"
 junit-jupiter-params-version = "5.11.3"
 junit-jupiter-version = "5.11.3"
 lombok-version = "1.18.34"
@@ -17,6 +18,7 @@ meanbean-version = "3.0.0-M9"
 mockito-core-version = "5.14.2"
 silly-collection-version = "28.1"
 silly-io-version = "3.2"
+slf4j-api-version = "2.1.0-alpha1"
 test-object-version = "9"
 throwable-version = "3"
 
@@ -26,6 +28,7 @@ commons-text = { module = "org.apache.commons:commons-text", version.ref = "comm
 equalsverifier = { module = "nl.jqno.equalsverifier:equalsverifier", version.ref = "equalsverifier-version" }
 file-worker = { module = "io.github.astrapi69:file-worker", version.ref = "file-worker-version" }
 gradle-migration-data = { module = "io.github.astrapi69:gradle-migration-data", version.ref = "gradle-migration-data-version" }
+jul-to-slf4j = { module = "org.slf4j:jul-to-slf4j", version.ref = "jul-to-slf4j-version" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter-version" }
 junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit-jupiter-params-version" }
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
@@ -35,6 +38,7 @@ mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito-cor
 mockito-junit-jupiter = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito-core-version" }
 silly-collection = { module = "io.github.astrapi69:silly-collection", version.ref = "silly-collection-version" }
 silly-io = { module = "io.github.astrapi69:silly-io", version.ref = "silly-io-version" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j-api-version" }
 test-object = { module = "io.github.astrapi69:test-object", version.ref = "test-object-version" }
 throwable = { module = "io.github.astrapi69:throwable", version.ref = "throwable-version" }
 
@@ -46,6 +50,15 @@ annotation-processor = [
 # Dependencies required only at compile-time and not included in the final artifact
 compile-only = [
     "lombok",
+]
+# Bundle of the core dependencies
+core-dependencies = [
+    "file-worker",
+]
+# Bundle of the logging dependencies
+logging = [
+    "jul-to-slf4j",
+    "slf4j-api",
 ]
 # Annotation processor dependencies used specifically for test classes
 test-annotation-processor = [
